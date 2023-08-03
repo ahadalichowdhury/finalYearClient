@@ -9,12 +9,14 @@ import RegistrationPage from './pages/RegistrationPage';
 import SendOTP from './pages/SendOTP';
 import VerifyOTP from "../src/accountRecover/VerifyOTP";
 import CreatePassword from "../src/accountRecover/CreatePassword";
+import ProfilePage from './pages/ProfilePage';
 function App() {
  if(getToken()){
   return(
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<HomePage />} />
+        <Route exact path="/Profile" element={<ProfilePage />} />
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
     </BrowserRouter>
